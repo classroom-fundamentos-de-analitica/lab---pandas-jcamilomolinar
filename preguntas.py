@@ -63,8 +63,7 @@ def pregunta_10():
 def pregunta_11():
     tablaNueva = tbl1.copy().set_index("_c4").groupby("_c0")
     proc = {g:",".join(sorted([str(x) for x in c])) for g,c in tablaNueva.groups.items()}
-    pd.DataFrame({"_c0":proc.keys(), "_c4":proc.values()})
-    return
+    return pd.DataFrame({"_c0":proc.keys(), "_c4":proc.values()})
 
 
 def pregunta_12():
